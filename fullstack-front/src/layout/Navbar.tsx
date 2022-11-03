@@ -1,13 +1,13 @@
 import React, { FC } from "react";
-
+import { Link } from "react-router-dom";
 const Navbar: FC = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Full Stack Application
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -20,7 +20,9 @@ const Navbar: FC = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
 
-          <button className="btn btn-outline-light">Add user</button>
+          <Link className="btn btn-outline-light" to="/adduser">
+            Add user
+          </Link>
         </div>
       </nav>
     </div>
